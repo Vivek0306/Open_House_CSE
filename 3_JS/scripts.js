@@ -51,7 +51,8 @@ function Scroll(){
     window.scroll(0, x);
     x = x + 2;
     if (x > y){
-        setTimeout(function (){location.reload()}, 100);
+        location.reload()
+        // setTimeout(function (){location.reload()}, 100);
     }
     requestAnimationFrame(Scroll)
 }
