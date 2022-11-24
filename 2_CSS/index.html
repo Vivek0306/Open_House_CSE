@@ -448,10 +448,16 @@
             </div>
         </div>
         <!-- Bootstrap core JS-->
-        <!-- <script>
-            window.scrollTo(0,document.body.scrollHeight);
-            setTimeout(function (){location.reload()},1000);
-        </script> -->
+        <!-- Auto scrolling part -->
+        <script>
+            let x = 0;
+            function Scroll(){
+                window.scroll(0, x);
+                x = x + 2;
+                requestAnimationFrame(Scroll)
+            }
+            Scroll()
+        </script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
         <!-- Core theme JS-->
         <!-- <script src="js/scripts.js"></script> -->

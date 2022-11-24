@@ -43,3 +43,11 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+let x = 0;
+function Scroll(){
+    window.scroll(0, x);
+    x = x + 2;
+    requestAnimationFrame(Scroll)
+}
+Scroll()
