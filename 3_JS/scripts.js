@@ -44,10 +44,15 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+// Auto scrolling part
 let x = 0;
+let y = document.body.scrollHeight;
 function Scroll(){
     window.scroll(0, x);
     x = x + 2;
+    if (x > y){
+        setTimeout(function (){location.reload()}, 500);
+    }
     requestAnimationFrame(Scroll)
 }
 Scroll()
